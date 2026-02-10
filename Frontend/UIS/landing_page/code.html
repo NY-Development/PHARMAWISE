@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHARMAWISE - Understand Your Medicine Clearly</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "primary-dark": "#0e6bc9",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "surface-light": "#ffffff",
+              "surface-dark": "#1a2632",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+<nav class="bg-surface-light dark:bg-surface-dark border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-20 items-center">
+<div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white">
+<span class="material-icons text-xl">medical_services</span>
+</div>
+<span class="font-bold text-2xl tracking-tight text-primary">PHARMAWISE</span>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary font-medium transition-colors" href="#">Patients</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary font-medium transition-colors" href="#">Doctors</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary font-medium transition-colors" href="#">Pharmacists</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative group hidden sm:block">
+<button class="flex items-center space-x-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary font-medium">
+<span class="material-icons text-xl">language</span>
+<span class="text-sm">EN</span>
+<span class="material-icons text-sm">expand_more</span>
+</button>
+<div class="absolute right-0 mt-2 w-32 bg-white dark:bg-surface-dark rounded-lg shadow-lg border border-slate-100 dark:border-slate-700 hidden group-hover:block p-1">
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded" href="#">English</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded" href="#">Español</a>
+<a class="block px-4 py-2 text-sm text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded" href="#">Français</a>
+</div>
+</div>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+<a class="text-sm font-semibold text-primary hover:text-primary-dark transition-colors hidden sm:block" href="#">Log In</a>
+<a class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold shadow-sm transition-all hover:shadow-md" href="#">
+                    Get Started
+                </a>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow">
+<section class="relative pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center max-w-4xl mx-auto mb-12">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Now integrated with National Health Systems
+                </span>
+<h1 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-6 leading-tight">
+                    Understand Your Medicine <br class="hidden md:block"/>
+<span class="text-primary relative inline-block">
+                        Clearly
+                        <svg class="absolute w-full h-3 -bottom-1 left-0 text-primary/20" preserveAspectRatio="none" viewBox="0 0 100 10">
+<path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" stroke-width="8"></path>
+</svg>
+</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Connecting patients with verified doctors and pharmacists for safer healthcare outcomes. Access drug information, prescriptions, and expert advice instantly.
+                </p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 p-2 max-w-4xl mx-auto transform transition-all hover:shadow-2xl">
+<div class="flex flex-col md:flex-row gap-2">
+<div class="flex-grow bg-slate-50 dark:bg-background-dark rounded-xl p-6 md:p-8 flex flex-col justify-center items-start border border-slate-100 dark:border-slate-800">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3 flex items-center gap-2" for="drug-search">
+<span class="material-icons text-primary text-base">search</span>
+                            Search Drug Database
+                        </label>
+<div class="relative w-full group">
+<input class="w-full pl-4 pr-12 py-4 rounded-lg border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-surface-dark text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-0 transition-colors text-lg shadow-sm" id="drug-search" placeholder="Enter drug name (e.g. Amoxicillin)" type="text"/>
+<button class="absolute right-2 top-2 bottom-2 bg-primary hover:bg-primary-dark text-white rounded px-4 font-medium transition-colors flex items-center justify-center shadow-sm">
+                                Search
+                            </button>
+</div>
+<p class="mt-3 text-xs text-slate-500 dark:text-slate-500 flex items-center gap-1">
+<span class="material-icons text-[14px]">verified</span>
+                            Verified against FDA &amp; EMA databases
+                        </p>
+</div>
+<div class="md:w-1/3 bg-primary/5 dark:bg-primary/10 rounded-xl p-6 md:p-8 flex flex-col justify-center items-center border border-dashed border-primary/30 hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors cursor-pointer group text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="w-14 h-14 bg-white dark:bg-surface-dark rounded-full flex items-center justify-center text-primary mb-4 shadow-md group-hover:scale-110 transition-transform duration-300 relative z-10">
+<span class="material-icons text-3xl">upload_file</span>
+</div>
+<h3 class="font-bold text-slate-800 dark:text-white text-lg mb-1 relative z-10">Upload Prescription</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 relative z-10">Scan or upload PDF/JPG</p>
+</div>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800">
+<p class="text-center text-sm font-medium text-slate-400 uppercase tracking-widest mb-6">Trusted Healthcare Data Sources</p>
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-2">
+<span class="material-icons text-3xl">health_and_safety</span>
+<span class="font-bold text-lg">FDA <span class="font-normal text-xs">Data</span></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-3xl">security</span>
+<span class="font-bold text-lg">HIPAA <span class="font-normal text-xs">Compliant</span></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-3xl">account_balance</span>
+<span class="font-bold text-lg">Gov <span class="font-normal text-xs">Health Ready</span></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-icons text-3xl">verified_user</span>
+<span class="font-bold text-lg">ISO <span class="font-normal text-xs">27001</span></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white dark:bg-surface-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-100 dark:border-slate-800 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-primary flex items-center justify-center mb-6">
+<span class="material-icons text-2xl">medication_liquid</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Drug Interactions</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Instantly check how your medications interact with each other. Our AI-driven engine alerts you to potential risks before they happen.
+                    </p>
+</div>
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-100 dark:border-slate-800 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 flex items-center justify-center mb-6">
+<span class="material-icons text-2xl">storefront</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Pharmacy Network</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Connect directly with licensed pharmacists in your area. Check stock availability and reserve your prescription for pickup.
+                    </p>
+</div>
+<div class="p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-100 dark:border-slate-800 hover:-translate-y-1 transition-transform duration-300">
+<div class="w-12 h-12 rounded-lg bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-6">
+<span class="material-icons text-2xl">folder_shared</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Digital Health Records</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Keep your prescription history and medical notes in one secure place, accessible by you and your authorized doctors anytime.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-primary rounded-3xl overflow-hidden shadow-2xl relative">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-white/10 skew-x-12 transform origin-bottom-left"></div>
+<div class="flex flex-col md:flex-row items-center relative z-10">
+<div class="p-10 md:p-16 md:w-1/2 text-white">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Join the Medical Professional Network</h2>
+<p class="text-blue-100 mb-8 text-lg">
+                            Are you a doctor or pharmacist? Join PHARMAWISE to streamline your practice, verify prescriptions digitally, and connect with patients securely.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-white text-primary px-6 py-3 rounded-lg font-bold shadow hover:bg-slate-100 transition-colors" href="#">
+                                Register as Doctor
+                            </a>
+<a class="bg-primary-dark/40 border border-white/30 text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark/60 transition-colors backdrop-blur-sm" href="#">
+                                Pharmacist Portal
+                            </a>
+</div>
+</div>
+<div class="md:w-1/2 h-64 md:h-auto self-stretch relative bg-slate-800">
+<img alt="Medical professionals analyzing digital data on a tablet in a modern clinic" class="w-full h-full object-cover opacity-90 mix-blend-overlay" data-alt="Doctors working with digital tablet in modern clinic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYumWhqLpoRlWIZD9y_SkL9G1fysl9Mdo7BDUSFlxzH_ofZ9c1NHjN3uzHjz9ViN32h2_XpkxfLlstAb-jtCgjnXm3NOn2Eb2gJV5Xid7lEBWOyWXLpW8RGz7t_DZWTQ5SBNCB5snAw-MA2U04g07X9BlKkZnVEvsr4ssEiuA7U5uI7UnVl5FBHKjLXUESLNXh_BaZm3pd3QFwoyUki0Cj9q2undrIEZgveP-2gHzuxMVfQgrRc8dFbibR_prlmtE8h3pw1i66Im8"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-90"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-6 h-6 rounded bg-primary flex items-center justify-center text-white">
+<span class="material-icons text-sm">medical_services</span>
+</div>
+<span class="font-bold text-xl text-primary">PHARMAWISE</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                    Making healthcare transparent and accessible for everyone.
+                </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">facebook</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">share</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-icons">email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Platform</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">For Patients</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">For Doctors</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">For Pharmacists</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Drug Database</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Company</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Legal</h4>
+<ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Accessibility</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+<p>© 2023 PHARMAWISE Healthcare Platform. All rights reserved.</p>
+<div class="flex items-center gap-2">
+<span class="material-icons text-base">lock</span>
+                Secure SSL Connection
+            </div>
+</div>
+</div>
+</footer>
+
+</body></html>

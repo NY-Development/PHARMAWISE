@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHARMAWISE - AI Symptom Education</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 min-h-screen flex flex-col">
+<nav class="sticky top-0 z-50 bg-white dark:bg-[#15202b] border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex-shrink-0 flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold text-xl">P</div>
+<span class="font-bold text-xl tracking-tight text-slate-900 dark:text-white">PHARMAWISE</span>
+</div>
+<div class="hidden md:flex space-x-6 text-sm font-medium">
+<a class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-primary dark:text-primary border-b-2 border-primary pb-5 mt-5" href="#">Symptom Checker</a>
+<a class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors" href="#">Consultations</a>
+<a class="text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors" href="#">Pharmacy</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full text-slate-400 hover:text-slate-500 dark:hover:text-slate-300">
+<span class="material-icons text-[20px]">notifications_none</span>
+</button>
+<div class="flex items-center gap-2 border-l border-slate-200 dark:border-slate-700 pl-4">
+<img alt="Profile" class="h-8 w-8 rounded-full border border-slate-200 dark:border-slate-700" data-alt="User avatar profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKai-kASTqU-iUY78XbSNUfGPu2cT70BfAvOUHEHvF9qbgqRkCT5m0U3Pxj-T6eKjXcTgc9fTTmBDK2x_70dZccqLIZlXG_axg6rYx9g8WQaDZ73y8K6GwJsf-eylSrTvRI5hHSkkjsYn0E01fN6FI_XHsMTwtifm1wZqPR3eA4heHAajuMqYDxNXehKrjFCrNiVu935-X9VUOxlkpatp8c0raLIQOGfUmtyPTSPnOTad7jkkt2dksgXtFNq8bAZNYmRwOPqTWDVM"/>
+<span class="hidden sm:block text-sm font-medium text-slate-700 dark:text-slate-200">Alex M.</span>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 gap-8 grid grid-cols-1 lg:grid-cols-12">
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div>
+<h1 class="text-3xl font-bold text-slate-900 dark:text-white mb-2">AI Symptom Analysis</h1>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                Powered by PHARMAWISE Intelligence. Describe your condition below for educational insights and potential medication matches.
+            </p>
+</div>
+<div class="bg-white dark:bg-[#15202b] rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<label class="block text-sm font-semibold text-slate-700 dark:text-slate-200" for="symptoms">Describe Symptoms</label>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">AI V2.0 Active</span>
+</div>
+<div class="relative">
+<textarea class="block w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#1a2632] shadow-sm focus:border-primary focus:ring-primary sm:text-sm resize-none p-4 placeholder-slate-400 dark:text-white" id="symptoms" placeholder="e.g., I have been experiencing a sharp throbbing pain in my right temple since this morning, accompanied by sensitivity to light..." rows="6"></textarea>
+<div class="absolute bottom-3 right-3 text-xs text-slate-400">0/500</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<button class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-icons text-[14px] mr-1">add</span> Fever
+                </button>
+<button class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-icons text-[14px] mr-1">add</span> Nausea
+                </button>
+<button class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-icons text-[14px] mr-1">add</span> Fatigue
+                </button>
+<button class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-icons text-[14px] mr-1">add</span> Rash
+                </button>
+</div>
+<button class="mt-2 w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-semibold text-white bg-primary hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all" type="button">
+<span class="material-icons text-[18px] mr-2">auto_awesome</span>
+                Analyze Symptoms
+            </button>
+</div>
+<div class="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/10">
+<span class="material-icons text-primary text-xl">verified_user</span>
+<div>
+<h4 class="text-sm font-semibold text-slate-900 dark:text-white">Secure &amp; Private</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Your health data is encrypted and anonymized. We do not share your personal inputs with third parties.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="bg-white dark:bg-[#15202b] rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-800/30">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="w-2 h-6 rounded-full bg-primary block"></span>
+                    AI Assessment
+                </h2>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">
+                        Confidence: High
+                    </span>
+</div>
+<div class="p-6">
+<div class="mb-6">
+<div class="flex justify-between text-xs font-medium text-slate-500 dark:text-slate-400 mb-2">
+<span>Low Urgency</span>
+<span class="text-orange-500">Moderate Attention</span>
+<span>Critical</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-r from-green-400 via-orange-400 to-red-500 opacity-20"></div>
+<div class="absolute top-0 left-0 h-full w-[45%] bg-gradient-to-r from-green-500 to-orange-400 rounded-full"></div>
+</div>
+</div>
+<h3 class="text-base font-semibold text-slate-900 dark:text-white mb-2">Potential Indication: Migraine with Aura</h3>
+<p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                    Based on your input of "throbbing temple pain" and "light sensitivity," the AI model identifies a high correlation with migraine headaches. The visual disturbances you described may indicate an aura phase.
+                </p>
+<div class="bg-primary/5 rounded border border-primary/10 p-3">
+<p class="text-xs text-primary dark:text-blue-300 flex items-start gap-2">
+<span class="material-icons text-[16px] mt-0.5">info</span>
+<span>This is an educational assessment. If symptoms persist for more than 24 hours or vision loss occurs, please consult a specialist immediately.</span>
+</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-[#15202b] rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="px-6 py-4 border-b border-slate-100 dark:border-slate-800">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Matched Medications</h2>
+<p class="text-xs text-slate-500 mt-1">Ranked by relevance to your symptom profile</p>
+</div>
+<div class="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+<div class="flex items-start gap-4">
+<div class="h-12 w-12 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0">
+<span class="material-icons">medication</span>
+</div>
+<div>
+<h4 class="text-base font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Sumatriptan Succinate</h4>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300">Prescription Only</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300">Tablet</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
+<div class="text-right">
+<div class="text-xs text-slate-500 dark:text-slate-400">Match Score</div>
+<div class="text-lg font-bold text-primary">94%</div>
+</div>
+<button class="text-sm font-medium text-primary hover:text-blue-700 dark:hover:text-blue-300 border border-primary/20 hover:border-primary rounded-lg px-4 py-2 transition-all">
+                            Consult
+                        </button>
+</div>
+</div>
+</div>
+<div class="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+<div class="flex items-start gap-4">
+<div class="h-12 w-12 rounded-lg bg-teal-100 dark:bg-teal-900/30 text-teal-600 dark:text-teal-400 flex items-center justify-center flex-shrink-0">
+<span class="material-icons">healing</span>
+</div>
+<div>
+<h4 class="text-base font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Ibuprofen (Advil)</h4>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">Over-the-Counter</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300">NSAID</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
+<div class="text-right">
+<div class="text-xs text-slate-500 dark:text-slate-400">Match Score</div>
+<div class="text-lg font-bold text-primary">82%</div>
+</div>
+<button class="text-sm font-medium text-primary hover:text-blue-700 dark:hover:text-blue-300 border border-primary/20 hover:border-primary rounded-lg px-4 py-2 transition-all">
+                            View Info
+                        </button>
+</div>
+</div>
+</div>
+<div class="p-4 sm:p-6 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group">
+<div class="flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+<div class="flex items-start gap-4">
+<div class="h-12 w-12 rounded-lg bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center flex-shrink-0">
+<span class="material-icons">local_drink</span>
+</div>
+<div>
+<h4 class="text-base font-semibold text-slate-900 dark:text-white group-hover:text-primary transition-colors">Excedrin Migraine</h4>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">Over-the-Counter</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300">Combo</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
+<div class="text-right">
+<div class="text-xs text-slate-500 dark:text-slate-400">Match Score</div>
+<div class="text-lg font-bold text-primary">78%</div>
+</div>
+<button class="text-sm font-medium text-primary hover:text-blue-700 dark:hover:text-blue-300 border border-primary/20 hover:border-primary rounded-lg px-4 py-2 transition-all">
+                            View Info
+                        </button>
+</div>
+</div>
+</div>
+<div class="px-6 py-3 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 rounded-b-xl flex justify-center">
+<a class="text-xs font-medium text-primary hover:text-blue-700 dark:hover:text-blue-300 flex items-center" href="#">
+                    View all matches <span class="material-icons text-[14px] ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto bg-slate-900 text-slate-400 py-8 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row gap-6 items-start justify-between">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-3 text-red-400">
+<span class="material-icons">warning</span>
+<h5 class="text-sm font-bold uppercase tracking-wide">Medical Disclaimer</h5>
+</div>
+<p class="text-xs leading-relaxed text-slate-400">
+                    The content provided by this AI tool is for informational and educational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this website.
+                </p>
+<div class="mt-4 flex gap-4 text-xs font-medium">
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Emergency Contacts</a>
+</div>
+</div>
+<div class="flex flex-col items-start md:items-end gap-2">
+<div class="text-xs text-slate-500">
+                    PHARMAWISE v2.4.1
+                </div>
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-green-500"></span>
+<span class="text-xs text-slate-400">Systems Operational</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

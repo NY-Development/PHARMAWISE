@@ -10,6 +10,7 @@ import { drugRoutes } from "./modules/drugs/drug.routes";
 import { ocrRoutes } from "./modules/ocr/ocr.routes";
 import { aiRoutes } from "./modules/ai/ai.routes";
 import { userRoutes } from "./modules/users/user.routes";
+import { doctorRoutes } from "./modules/doctor/doctor.routes";
 
 const app = express();
 
@@ -36,8 +37,10 @@ app.get("/health", (_req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/drugs", drugRoutes);
 app.use("/api/ocr", ocrRoutes);
+app.use("/api/prescriptions", ocrRoutes);
 app.use("/api/ai", aiRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/doctor", doctorRoutes);
 
 app.use(notFoundHandler);
 app.use(errorHandler);

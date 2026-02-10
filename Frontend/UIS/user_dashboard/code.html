@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHARMAWISE - Patient Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-hover": "#0e6ac7",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a2632",
+                        "text-main": "#1e293b",
+                        "text-sub": "#64748b",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .sidebar-link.active {
+            background-color: rgba(19, 127, 236, 0.1);
+            color: #137fec;
+            border-right: 3px solid #137fec;
+        }input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main antialiased transition-colors duration-200">
+<div class="flex h-screen overflow-hidden">
+<aside class="w-64 bg-card-light dark:bg-card-dark border-r border-gray-200 dark:border-gray-800 hidden md:flex flex-col flex-shrink-0 z-20">
+<div class="h-16 flex items-center px-6 border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2 text-primary font-bold text-xl">
+<span class="material-symbols-rounded text-3xl">local_pharmacy</span>
+<span>PHARMAWISE</span>
+</div>
+</div>
+<nav class="flex-1 px-3 py-6 space-y-1 overflow-y-auto">
+<a class="sidebar-link active flex items-center gap-3 px-3 py-3 text-sm font-medium rounded-lg transition-colors" href="#">
+<span class="material-symbols-rounded">dashboard</span>
+                Dashboard
+            </a>
+<a class="sidebar-link flex items-center gap-3 px-3 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-rounded group-hover:text-primary transition-colors">calendar_month</span>
+                Appointments
+            </a>
+<a class="sidebar-link flex items-center gap-3 px-3 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-rounded group-hover:text-primary transition-colors">prescriptions</span>
+                Prescriptions
+            </a>
+<a class="sidebar-link flex items-center gap-3 px-3 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-rounded group-hover:text-primary transition-colors">chat_bubble</span>
+                Messages
+                <span class="ml-auto bg-primary text-white text-xs px-2 py-0.5 rounded-full">2</span>
+</a>
+<a class="sidebar-link flex items-center gap-3 px-3 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors group" href="#">
+<span class="material-symbols-rounded group-hover:text-primary transition-colors">folder_shared</span>
+                Documents
+            </a>
+</nav>
+<div class="p-4 border-t border-gray-100 dark:border-gray-800">
+<a class="flex items-center gap-3 px-3 py-3 text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-colors" href="#">
+<img alt="Profile photo of Sarah Jenkins" class="w-8 h-8 rounded-full object-cover border border-gray-200" data-alt="Portrait of a woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi4QcDHr1KZ8Fo3_bT5iSE7sHNkLUA-oLPcsyjeUBYfWVfSS_gLIN_xyB6De8RXsT2R02znL1RirFvzbpQGeHC7L1vpONFF0Ep4-6Kf5AyeUwkUc0zcXtx1_-rb-PJzBD4OY2CK-NZzUbbf00Nz5-E0ye-VcSapdtOWQBn9pJmibn3PWe1DbzRckuZOMxGgIXcGQuxSSevLeQKqlbtV4xGsVmvlF_jw9sS-j6FWtjYfr-1GzeFZR1CO4HyHHpQpaIKMMKxpyFJ5TU"/>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-gray-900 dark:text-white truncate">Sarah Jenkins</p>
+<p class="text-xs text-gray-500 truncate">Patient ID: #8832</p>
+</div>
+</a>
+</div>
+</aside>
+<div class="flex-1 flex flex-col min-w-0 overflow-hidden">
+<header class="bg-card-light dark:bg-card-dark border-b border-gray-200 dark:border-gray-800 h-16 flex items-center justify-between px-4 sm:px-6 lg:px-8">
+<button class="md:hidden p-2 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg">
+<span class="material-symbols-rounded">menu</span>
+</button>
+<div class="flex-1 flex justify-center px-2 lg:ml-6 lg:justify-end">
+<div class="max-w-lg w-full lg:max-w-xs">
+<label class="sr-only" for="search">Search</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-rounded text-gray-400 text-xl">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg leading-5 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:border-primary focus:ring-1 focus:ring-primary sm:text-sm" id="search" name="search" placeholder="Search doctors, drugs, or records" type="search"/>
+</div>
+</div>
+</div>
+<div class="ml-4 flex items-center md:ml-6">
+<button class="p-1 rounded-full text-gray-400 hover:text-primary focus:outline-none relative">
+<span class="material-symbols-rounded">notifications</span>
+<span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-card-dark"></span>
+</button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark p-4 sm:p-6 lg:p-8">
+<div class="mb-8">
+<h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Welcome back, Sarah 👋</h1>
+<p class="text-gray-600 dark:text-gray-400 mb-6">Here's what's happening with your health today.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<button class="flex items-center gap-4 p-4 bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 hover:border-primary/50 hover:bg-primary/5 transition-all group text-left">
+<div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-rounded text-2xl">person_search</span>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 dark:text-white">Find a Doctor</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">Book a new appointment</p>
+</div>
+</button>
+<button class="flex items-center gap-4 p-4 bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 hover:border-primary/50 hover:bg-primary/5 transition-all group text-left">
+<div class="w-12 h-12 rounded-lg bg-green-100 text-green-600 flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-colors">
+<span class="material-symbols-rounded text-2xl">medication</span>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 dark:text-white">Refill Prescription</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">Request pharmacy refill</p>
+</div>
+</button>
+<button class="flex items-center gap-4 p-4 bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 hover:border-primary/50 hover:bg-primary/5 transition-all group text-left">
+<div class="w-12 h-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition-colors">
+<span class="material-symbols-rounded text-2xl">upload_file</span>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 dark:text-white">Upload Documents</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">Lab results or insurance</p>
+</div>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 space-y-6">
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+<div class="p-6 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-rounded text-primary">pill</span>
+                                My Medications
+                            </h2>
+<a class="text-sm font-medium text-primary hover:text-primary-hover" href="#">View all</a>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between p-4 rounded-lg bg-background-light dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-500 flex items-center justify-center">
+<span class="material-symbols-rounded">medication_liquid</span>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 dark:text-white">Amoxicillin</h4>
+<p class="text-sm text-gray-500">500mg • 2x Daily (After meals)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                                            Active
+                                        </span>
+<p class="text-xs text-gray-400 mt-1">Refill in 12 days</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 rounded-lg bg-background-light dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-orange-50 dark:bg-orange-900/20 text-orange-500 flex items-center justify-center">
+<span class="material-symbols-rounded">pill</span>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 dark:text-white">Lisinopril</h4>
+<p class="text-sm text-gray-500">10mg • 1x Daily (Morning)</p>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400">
+                                            Refill Needed
+                                        </span>
+<button class="block ml-auto mt-1 text-xs font-semibold text-primary hover:underline">Request Now</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="p-6 border-b border-gray-100 dark:border-gray-800">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-rounded text-primary">history</span>
+                                Recent Activity
+                            </h2>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-xs font-semibold tracking-wide text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+<th class="px-6 py-3">Details</th>
+<th class="px-6 py-3">Provider</th>
+<th class="px-6 py-3">Date</th>
+<th class="px-6 py-3 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="bg-white dark:bg-card-dark divide-y divide-gray-100 dark:divide-gray-700">
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center">
+<div>
+<p class="font-semibold text-sm text-gray-900 dark:text-white">General Checkup</p>
+<p class="text-xs text-gray-500">Routine physical exam</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-400">Dr. Emily Smith</td>
+<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-400">Oct 24, 2023</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-primary transition-colors" title="Download Summary">
+<span class="material-symbols-rounded">download</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center">
+<div>
+<p class="font-semibold text-sm text-gray-900 dark:text-white">Prescription Refill</p>
+<p class="text-xs text-gray-500">Rx #998322-01</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-400">Pharmacy #42</td>
+<td class="px-6 py-4 text-sm text-gray-600 dark:text-gray-400">Oct 10, 2023</td>
+<td class="px-6 py-4 text-right">
+<button class="text-gray-400 hover:text-primary transition-colors" title="Download Receipt">
+<span class="material-symbols-rounded">receipt_long</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1 space-y-6">
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="p-6 border-b border-gray-100 dark:border-gray-800">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-rounded text-primary">accessibility_new</span>
+                                Accessibility
+                            </h2>
+</div>
+<div class="p-6 space-y-6">
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="text-sm font-medium text-gray-700 dark:text-gray-300">Text Size</label>
+<span class="text-xs text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">100%</span>
+</div>
+<div class="relative w-full h-6 flex items-center">
+<span class="text-xs mr-2">A</span>
+<input class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-primary" max="200" min="100" type="range" value="100"/>
+<span class="text-lg ml-2 font-bold">A</span>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">High Contrast</p>
+<p class="text-xs text-gray-500">Increase visual distinction</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Screen Reader</p>
+<p class="text-xs text-gray-500">Optimize layout structure</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-800">
+<div class="p-6 border-b border-gray-100 dark:border-gray-800">
+<h2 class="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+<span class="material-symbols-rounded text-primary">language</span>
+                                Preferences
+                            </h2>
+</div>
+<div class="p-6 space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Language</label>
+<select class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-md">
+<option>English (US)</option>
+<option>Spanish</option>
+<option>French</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Region</label>
+<select class="block w-full pl-3 pr-10 py-2 text-base border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-md">
+<option>United States</option>
+<option>Canada</option>
+<option>United Kingdom</option>
+</select>
+</div>
+</div>
+</div>
+<div class="relative h-40 w-full rounded-xl overflow-hidden bg-gray-200 dark:bg-gray-800 border border-gray-200 dark:border-gray-800">
+<img alt="Map view of city streets with pins" class="absolute inset-0 w-full h-full object-cover opacity-80" data-alt="Abstract map showing nearby pharmacy locations" data-location="City Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCH9gcjjzJ14SRPAjCOnNsYseO0pRt8ygICtWUHyFzll5nf6C99OVec7tmmCvcJkBjgeDCDBlUXudcC0yG5TRWiBLXtOlmfkLuWSqI11bW4j519dfHjVUS2i3Osb7CLCMydRmH8dZqXui-3iYFXf8lwfLTw89F8Ys7_uLgSGoxM77LUake3vG9oyokdPoZvFgrhgUyFBB6gzyeet5mq8ZkmntoIIhd-wOrBDYK5Mph4jb5Hy8diW5dG9S7SjvIiPgrl5AuaEXbBmQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex flex-col justify-end">
+<p class="text-white font-semibold text-sm">Nearby Pharmacies</p>
+<p class="text-white/80 text-xs">3 locations open 24/7</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

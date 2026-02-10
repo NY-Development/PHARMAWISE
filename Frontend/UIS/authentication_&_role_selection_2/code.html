@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHARMAWISE - Sign Up</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-dark": "#0e64bd",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 min-h-screen flex flex-col antialiased">
+<nav class="w-full px-6 py-4 flex justify-between items-center absolute top-0 z-10">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold text-xl">P</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">PHARMAWISE</span>
+</div>
+<a class="text-sm font-medium text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors" href="#">Need help?</a>
+</nav>
+<main class="flex-grow flex items-center justify-center p-4 md:p-8 relative">
+<div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute top-1/2 -left-24 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+</div>
+<div class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center z-10">
+<div class="hidden lg:flex flex-col gap-8 pr-8">
+<div class="space-y-4">
+<h1 class="text-4xl xl:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
+                        Modern Healthcare <br/>
+<span class="text-primary">Simplified &amp; Secure.</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-md">
+                        Join PHARMAWISE to connect with top specialists, manage prescriptions, and access your medical history securely from anywhere.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-4">
+<div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-icons text-xl">shield</span>
+</div>
+<div>
+<h3 class="font-semibold text-sm">HIPAA Compliant</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Your data is encrypted and safe.</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm flex items-start gap-3">
+<div class="p-2 rounded-lg bg-primary/10 text-primary">
+<span class="material-icons text-xl">schedule</span>
+</div>
+<div>
+<h3 class="font-semibold text-sm">24/7 Access</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Healthcare on your schedule.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+<p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">Trusted by professionals at</p>
+<div class="flex gap-6 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+<div class="h-8 w-24 bg-slate-200 dark:bg-slate-700 rounded animate-pulse" data-alt="Partner Hospital Logo Placeholder"></div>
+<div class="h-8 w-24 bg-slate-200 dark:bg-slate-700 rounded animate-pulse" data-alt="Partner Pharmacy Logo Placeholder"></div>
+<div class="h-8 w-24 bg-slate-200 dark:bg-slate-700 rounded animate-pulse" data-alt="Health Tech Partner Logo Placeholder"></div>
+</div>
+</div>
+</div>
+<div class="w-full max-w-md mx-auto lg:ml-auto">
+<div class="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 overflow-hidden">
+<div class="flex border-b border-slate-100 dark:border-slate-700">
+<button class="flex-1 py-4 text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                            Log In
+                        </button>
+<button class="flex-1 py-4 text-sm font-semibold text-primary border-b-2 border-primary bg-primary/5">
+                            Sign Up
+                        </button>
+</div>
+<div class="p-6 sm:p-8 space-y-6">
+<div class="text-center space-y-2 mb-6">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Create Your Account</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Please select your role to continue</p>
+</div>
+<div aria-label="Select User Role" class="grid grid-cols-2 gap-3 mb-6" role="radiogroup">
+<label class="cursor-pointer group relative">
+<input checked="" class="peer sr-only" name="role" type="radio" value="patient"/>
+<div class="p-3 rounded-xl border-2 border-primary bg-primary/5 peer-checked:bg-primary/10 peer-checked:border-primary hover:border-primary/50 transition-all flex flex-col items-center gap-2 text-center h-full">
+<div class="p-2 bg-white dark:bg-slate-800 rounded-full shadow-sm text-primary group-hover:scale-110 transition-transform">
+<span class="material-icons text-xl">person</span>
+</div>
+<span class="text-sm font-semibold text-primary">Patient</span>
+</div>
+<div class="absolute top-2 right-2 w-4 h-4 bg-primary rounded-full text-white flex items-center justify-center shadow-sm opacity-100 transition-opacity">
+<span class="material-icons text-[10px] font-bold">check</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="role" type="radio" value="doctor"/>
+<div class="p-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50 transition-all flex flex-col items-center gap-2 text-center h-full">
+<div class="p-2 bg-slate-100 dark:bg-slate-700 rounded-full text-slate-500 dark:text-slate-400 peer-checked:text-primary peer-checked:bg-white group-hover:scale-110 transition-transform">
+<span class="material-icons text-xl">medical_services</span>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-300 peer-checked:text-primary">Doctor</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="role" type="radio" value="pharmacist"/>
+<div class="p-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50 transition-all flex flex-col items-center gap-2 text-center h-full">
+<div class="p-2 bg-slate-100 dark:bg-slate-700 rounded-full text-slate-500 dark:text-slate-400 peer-checked:text-primary peer-checked:bg-white group-hover:scale-110 transition-transform">
+<span class="material-icons text-xl">medication</span>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-300 peer-checked:text-primary">Pharmacist</span>
+</div>
+</label>
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="role" type="radio" value="admin"/>
+<div class="p-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50 transition-all flex flex-col items-center gap-2 text-center h-full">
+<div class="p-2 bg-slate-100 dark:bg-slate-700 rounded-full text-slate-500 dark:text-slate-400 peer-checked:text-primary peer-checked:bg-white group-hover:scale-110 transition-transform">
+<span class="material-icons text-xl">admin_panel_settings</span>
+</div>
+<span class="text-sm font-semibold text-slate-600 dark:text-slate-300 peer-checked:text-primary">Admin</span>
+</div>
+</label>
+</div>
+<form class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="fullname">Full Name</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-icons text-lg">badge</span>
+</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary text-sm shadow-sm transition-shadow" id="fullname" placeholder="John Doe" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="email">Email Address</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-icons text-lg">mail</span>
+</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary text-sm shadow-sm transition-shadow" id="email" placeholder="name@pharmawise.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="phone">Phone Number</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-icons text-lg">phone</span>
+</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary text-sm shadow-sm transition-shadow" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="password">Password</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+<span class="material-icons text-lg">lock</span>
+</span>
+<input class="w-full pl-10 pr-10 py-2.5 rounded-lg border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700/50 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary text-sm shadow-sm transition-shadow" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200" type="button">
+<span class="material-icons text-lg">visibility</span>
+</button>
+</div>
+<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Must be at least 8 characters long.</p>
+</div>
+<div class="flex items-center text-sm">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary border-slate-300 focus:ring-primary bg-slate-50 dark:bg-slate-700 dark:border-slate-600" type="checkbox"/>
+<span class="text-slate-600 dark:text-slate-400">I agree to the <a class="text-primary hover:underline" href="#">Terms</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a></span>
+</label>
+</div>
+<button class="w-full py-3 px-4 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg shadow-lg shadow-primary/30 transition-all duration-200 transform active:scale-[0.98] flex items-center justify-center gap-2" type="button">
+<span>Create Account</span>
+<span class="material-icons text-sm">arrow_forward</span>
+</button>
+</form>
+<div class="relative py-2">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-700"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="px-2 bg-white dark:bg-slate-800 text-xs text-slate-400 uppercase tracking-wider">Or continue with</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2.5 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors bg-white dark:bg-slate-800" type="button">
+<img alt="Google Logo" class="w-5 h-5" data-alt="Google G Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7PFjtQS5cdxoiomT9ZKIuVNDimbufThMFgmpIW5lPDAqYnW-lOH1CO4Jyn_FtvaXhOKOLl_3bb5NWXAWKXG0VDW4SFjFrz3u6L6QMOkMtXtVHiGATqnXSXlUq6PpjKutxSLlzRh_z2vdRik8inouQ04GvoZ25jrlrI1meP-sOoU0u5OhHZrym8t1fcIZxiwtIqQNeoEyaRc8rN-WDlBAf9D2hvlms16ibKP8qpexFUUQUMKfnRpuhu4FgG_nsxwDfMF3JXYDHzFg"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors bg-white dark:bg-slate-800" type="button">
+<img alt="Apple Logo" class="w-5 h-5 dark:invert" data-alt="Apple Brand Logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxGb4FojKZecpd3G3vz7TLG5exzt0-8J3s6lQ89L_WnWJnJscm1YN9n3i-QSIJ114UuuVWIsJCtIj6duAn4-0SvG0PBglrROS8Z-uhF43lcOr5PurpB8j6HP5Aw6q1jX7v4DY6pJUpR6Ebp9ahqBjI2fVjHPf4arolsxjevR29xBYpVmZRP3oZY6rHvZTCGXdjSGdi_ZtueINjsxEBVHNNoJE-BVp2QBJmUzg89Y3t3j3a_8vSYP0AMFRHdJN_EVu_Ps4q1l0UDOM"/>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-200">Apple</span>
+</button>
+</div>
+<p class="text-center text-xs text-slate-400 mt-6">
+                            Already have an account? <a class="underline hover:text-primary" href="#">Log in</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="py-6 text-center text-sm text-slate-500 dark:text-slate-400">
+<div class="flex items-center justify-center gap-6 mb-2">
+<a class="hover:text-primary transition-colors" href="#">About Us</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+<a class="hover:text-primary transition-colors" href="#">Legal</a>
+</div>
+<p>© 2023 PHARMAWISE Health Systems Inc. All rights reserved.</p>
+</footer>
+</body></html>

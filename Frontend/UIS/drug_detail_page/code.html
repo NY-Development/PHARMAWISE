@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Drug Detail Page - PHARMAWISE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "primary-dark": "#0b63be",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1c2630",
+                        "text-main": "#0f172a",
+                        "text-muted": "#64748b",
+                        "danger-light": "#fef2f2",
+                        "danger-border": "#fecaca",
+                        "danger-text": "#991b1b",
+                        "warning-light": "#fffbeb",
+                        "warning-border": "#fde68a",
+                        "warning-text": "#92400e",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-main dark:text-gray-100 antialiased selection:bg-primary/30 selection:text-primary">
+<nav class="sticky top-0 z-50 bg-card-light dark:bg-card-dark border-b border-gray-200 dark:border-gray-800 h-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+<div class="flex items-center justify-between h-full">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2" href="#">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold text-xl">P</div>
+<span class="text-xl font-bold tracking-tight text-primary">PHARMAWISE</span>
+</a>
+<div class="hidden md:flex items-center gap-6 text-sm font-medium text-text-muted dark:text-gray-400">
+<a class="hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-primary font-semibold" href="#">Drugs Database</a>
+<a class="hover:text-primary transition-colors" href="#">Interactions</a>
+<a class="hover:text-primary transition-colors" href="#">Community</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+<span class="material-icons text-xl">search</span>
+</span>
+<input class="w-64 pl-10 pr-4 py-2 bg-background-light dark:bg-gray-800 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Search drugs, symptoms..." type="text"/>
+</div>
+<button class="p-2 text-gray-400 hover:text-primary transition-colors">
+<span class="material-icons-outlined">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm cursor-pointer">
+                        DR
+                    </div>
+</div>
+</div>
+</div>
+</nav>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div class="flex items-center gap-2 text-sm text-text-muted dark:text-gray-400">
+<a class="hover:underline" href="#">Database</a>
+<span class="material-icons text-xs">chevron_right</span>
+<a class="hover:underline" href="#">Antibiotics</a>
+<span class="material-icons text-xs">chevron_right</span>
+<span class="text-primary font-medium">Amoxicillin</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-icons-outlined text-lg">share</span>
+                    Share
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<span class="material-icons-outlined text-lg">print</span>
+                    Print PDF
+                </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg text-sm font-medium transition-colors shadow-sm shadow-primary/30">
+<span class="material-icons-outlined text-lg">bookmark_border</span>
+                    Save to My Meds
+                </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<aside class="hidden lg:block lg:col-span-3 sticky top-24">
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium bg-primary/10 text-primary rounded-lg" href="#overview">
+<span class="material-icons-outlined text-lg">info</span>
+                        Overview
+                    </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-muted hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-400 rounded-lg transition-colors" href="#dosage">
+<span class="material-icons-outlined text-lg">medication</span>
+                        Dosage &amp; Admin
+                    </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-muted hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-400 rounded-lg transition-colors" href="#safety">
+<span class="material-icons-outlined text-lg">warning</span>
+                        Safety &amp; Warnings
+                    </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-muted hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-400 rounded-lg transition-colors" href="#interactions">
+<span class="material-icons-outlined text-lg">compare_arrows</span>
+                        Interactions
+                    </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-muted hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-400 rounded-lg transition-colors" href="#pregnancy">
+<span class="material-icons-outlined text-lg">child_care</span>
+                        Pregnancy &amp; Kids
+                    </a>
+<a class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-text-muted hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-400 rounded-lg transition-colors" href="#ingredients">
+<span class="material-icons-outlined text-lg">science</span>
+                        Ingredients
+                    </a>
+</nav>
+<div class="mt-8 p-4 bg-gradient-to-br from-primary/10 to-transparent rounded-xl border border-primary/10">
+<h4 class="text-sm font-semibold text-primary mb-2">Need professional help?</h4>
+<p class="text-xs text-text-muted dark:text-gray-400 mb-3">Connect with a pharmacist instantly for personalized advice.</p>
+<button class="w-full py-2 text-xs font-semibold text-primary border border-primary/30 rounded-lg hover:bg-primary hover:text-white transition-colors">
+                        Chat with Pharmacist
+                    </button>
+</div>
+</aside>
+<main class="col-span-1 lg:col-span-9 space-y-8">
+<section class="bg-card-light dark:bg-card-dark rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800" id="overview">
+<div class="flex flex-col sm:flex-row gap-6">
+<div class="w-full sm:w-32 h-32 flex-shrink-0 bg-background-light dark:bg-gray-800 rounded-lg flex items-center justify-center p-4">
+<div class="w-16 h-8 rounded-full bg-gradient-to-r from-red-400 to-yellow-100 transform -rotate-45 shadow-lg border border-white/20"></div>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Amoxicillin</h1>
+<span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-900 border border-blue-200">Generic Name</span>
+<span class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600">RX Only</span>
+</div>
+<p class="text-lg text-text-muted dark:text-gray-300 font-light mb-4">Brand names: Amoxil, Moxatag</p>
+<p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                Amoxicillin is a penicillin antibiotic that fights bacteria. It is used to treat many different types of infection caused by bacteria, such as tonsillitis, bronchitis, pneumonia, and infections of the ear, nose, throat, skin, or urinary tract.
+                            </p>
+</div>
+</div>
+</section>
+<section class="bg-danger-light dark:bg-red-900/20 border border-danger-border dark:border-red-800/50 rounded-xl p-5 flex gap-4 items-start">
+<div class="flex-shrink-0 p-2 bg-white/50 dark:bg-red-900/40 rounded-full">
+<span class="material-icons text-danger-text dark:text-red-400">warning_amber</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-danger-text dark:text-red-400 mb-1">Important Safety Information</h3>
+<p class="text-sm text-red-800 dark:text-red-200 leading-relaxed">
+                            Do not use this medication if you are allergic to amoxicillin or to any other penicillin antibiotic, such as ampicillin, dicloxacillin, oxacillin, penicillin, or others. Severe allergic reactions (anaphylaxis) can occur.
+                        </p>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6" id="dosage">
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-semibold flex items-center gap-2">
+<span class="material-icons text-primary text-xl">schedule</span>
+                                Standard Dosage
+                            </h2>
+<span class="text-xs text-text-muted bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Adults</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-3 border-b border-gray-100 dark:border-gray-800">
+<span class="text-gray-600 dark:text-gray-400">Mild/Moderate Infection</span>
+<span class="font-semibold text-gray-900 dark:text-white">250mg every 8 hrs</span>
+</div>
+<div class="flex justify-between items-center pb-3 border-b border-gray-100 dark:border-gray-800">
+<span class="text-gray-600 dark:text-gray-400">Severe Infection</span>
+<span class="font-semibold text-gray-900 dark:text-white">500mg every 8 hrs</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-600 dark:text-gray-400">High Dose (Specific)</span>
+<span class="font-semibold text-gray-900 dark:text-white">875mg every 12 hrs</span>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-semibold flex items-center gap-2">
+<span class="material-icons text-primary text-xl">local_drink</span>
+                                How to Take
+                            </h2>
+</div>
+<ul class="space-y-3">
+<li class="flex gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-icons text-green-500 text-base mt-0.5">check_circle</span>
+                                Can be taken with or without food.
+                            </li>
+<li class="flex gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-icons text-green-500 text-base mt-0.5">check_circle</span>
+                                Take at the same time every day.
+                            </li>
+<li class="flex gap-3 text-sm text-gray-700 dark:text-gray-300">
+<span class="material-icons text-green-500 text-base mt-0.5">check_circle</span>
+                                Finish the full prescribed course even if you feel better.
+                            </li>
+</ul>
+</div>
+</section>
+<section class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden" id="interactions">
+<div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center">
+<h2 class="text-xl font-semibold">Interactions</h2>
+<div class="relative">
+<input class="text-sm border border-gray-200 dark:border-gray-700 rounded-lg py-1.5 px-3 bg-gray-50 dark:bg-gray-800 focus:ring-1 focus:ring-primary outline-none" placeholder="Check interaction..." type="text"/>
+<span class="material-icons absolute right-2 top-1.5 text-gray-400 text-sm">search</span>
+</div>
+</div>
+<div class="divide-y divide-gray-100 dark:divide-gray-800">
+<div class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors flex items-start gap-4">
+<div class="mt-1">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400">
+<span class="material-icons text-sm">priority_high</span>
+</span>
+</div>
+<div>
+<h4 class="font-medium text-gray-900 dark:text-white">Methotrexate</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Amoxicillin may decrease the excretion of Methotrexate. Risk Severity: <span class="text-red-600 font-medium">Major</span></p>
+</div>
+</div>
+<div class="p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors flex items-start gap-4">
+<div class="mt-1">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400">
+<span class="material-icons text-sm">warning</span>
+</span>
+</div>
+<div>
+<h4 class="font-medium text-gray-900 dark:text-white">Oral Contraceptives</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Antibiotics may decrease the effectiveness of oral contraceptives. Risk Severity: <span class="text-orange-600 font-medium">Moderate</span></p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-gray-50 dark:bg-gray-800/30 text-center">
+<button class="text-primary text-sm font-medium hover:underline">View all 12 interactions</button>
+</div>
+</section>
+<section class="space-y-4">
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 group" id="pregnancy" tabindex="0">
+<div class="p-6 flex justify-between items-center cursor-pointer select-none">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary">
+<span class="material-icons">pregnant_woman</span>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 dark:text-white">Pregnancy &amp; Lactation</h3>
+<p class="text-sm text-text-muted">Category B - Generally considered safe</p>
+</div>
+</div>
+<span class="material-icons text-gray-400 transform group-focus-within:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="hidden group-focus-within:block px-6 pb-6 pt-0 border-t border-gray-100 dark:border-gray-800 mt-2">
+<div class="pt-4 prose prose-sm dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+<p><strong>Pregnancy:</strong> Animal reproduction studies have failed to demonstrate a risk to the fetus and there are no adequate and well-controlled studies in pregnant women.</p>
+<p class="mt-2"><strong>Lactation:</strong> Penicillins have been shown to be excreted in human milk. Caution should be exercised when amoxicillin is administered to a nursing woman.</p>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 group" id="ingredients" tabindex="0">
+<div class="p-6 flex justify-between items-center cursor-pointer select-none">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-600 dark:text-purple-400">
+<span class="material-icons">science</span>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 dark:text-white">Ingredients</h3>
+<p class="text-sm text-text-muted">Active and inactive components</p>
+</div>
+</div>
+<span class="material-icons text-gray-400 transform group-focus-within:rotate-180 transition-transform">expand_more</span>
+</div>
+<div class="hidden group-focus-within:block px-6 pb-6 pt-0 border-t border-gray-100 dark:border-gray-800 mt-2">
+<div class="pt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+<div>
+<h4 class="font-semibold text-gray-900 dark:text-white mb-2">Active Ingredient</h4>
+<p class="text-gray-600 dark:text-gray-400">Amoxicillin (as trihydrate)</p>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 dark:text-white mb-2">Inactive Ingredients</h4>
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed">Magnesium stearate, sodium lauryl sulfate, titanium dioxide, gelatin, FD&amp;C Blue No. 1, FD&amp;C Red No. 3.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="flex flex-col md:flex-row justify-between items-center text-xs text-text-muted dark:text-gray-500 pt-8 border-t border-gray-200 dark:border-gray-800">
+<p>Source: FDA Drug Label Information. Last updated: October 24, 2023.</p>
+<div class="flex items-center gap-4 mt-2 md:mt-0">
+<a class="hover:text-primary" href="#">Disclaimer</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<span class="flex items-center gap-1">
+<span class="material-icons text-xs">qr_code</span> 
+                            ID: 99482-12
+                        </span>
+</div>
+</div>
+</main>
+</div>
+</div>
+<button class="lg:hidden fixed bottom-6 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-primary/40 flex items-center justify-center hover:bg-primary-dark transition-colors z-50">
+<span class="material-icons text-2xl">download</span>
+</button>
+</body></html>

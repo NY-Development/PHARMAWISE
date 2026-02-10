@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PHARMAWISE - Feature Comparison</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 font-display transition-colors duration-200">
+<!-- Navbar Placeholder -->
+<nav class="w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 h-16 flex items-center justify-between px-6 lg:px-12 sticky top-0 z-50">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold text-xl">P</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">PHARMA<span class="text-primary">WISE</span></span>
+</div>
+<div class="hidden md:flex gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Platform</a>
+<a class="hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="text-primary" href="#">Pricing</a>
+<a class="hover:text-primary transition-colors" href="#">Resources</a>
+</div>
+<div class="flex gap-3">
+<button class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary">Log in</button>
+<button class="bg-primary hover:bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded transition-colors">Get Started</button>
+</div>
+</nav>
+<!-- Header Section -->
+<header class="py-16 px-6 text-center max-w-7xl mx-auto">
+<h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Choose the right plan for your practice</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-8">Compare our plans to find the perfect fit for your clinical needs, from basic drug interactions to advanced AI-powered diagnostics.</p>
+<!-- Billing Toggle -->
+<div class="flex items-center justify-center gap-4 mb-8">
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400">Monthly</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary/50 dark:peer-focus:ring-primary/30 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<span class="text-sm font-medium text-slate-900 dark:text-white">Annual <span class="text-xs text-primary bg-primary/10 px-2 py-0.5 rounded-full ml-1 font-semibold">Save 20%</span></span>
+</div>
+</header>
+<!-- Main Comparison Table Section -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+<!-- Table Container -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-800 relative">
+<!-- Sticky Header Row -->
+<div class="sticky top-16 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="grid grid-cols-4 min-w-[800px]">
+<!-- Empty Top Left Cell -->
+<div class="p-6 flex flex-col justify-end border-r border-slate-100 dark:border-slate-800">
+<span class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Features</span>
+</div>
+<!-- Basic Access Header -->
+<div class="p-6 text-center border-r border-slate-100 dark:border-slate-800 flex flex-col relative group">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Basic Access</h3>
+<div class="text-3xl font-bold text-slate-900 dark:text-white mb-1">Free</div>
+<p class="text-xs text-slate-500 mb-4 h-8">Essential tools for individual practitioners.</p>
+<button class="w-full mt-auto py-2.5 px-4 rounded border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:border-primary hover:text-primary transition-colors bg-transparent">Get Started</button>
+</div>
+<!-- Enhanced Understanding Header (Highlighted) -->
+<div class="p-6 text-center border-r border-slate-100 dark:border-slate-800 flex flex-col relative bg-primary/5 dark:bg-primary/10">
+<!-- Most Popular Badge -->
+<div class="absolute -top-0 left-1/2 transform -translate-x-1/2 bg-primary text-white text-[10px] font-bold uppercase tracking-wider py-1 px-3 rounded-b shadow-sm">
+                            Most Popular
+                        </div>
+<h3 class="text-lg font-bold text-primary mb-2 mt-2">Enhanced Understanding</h3>
+<div class="text-3xl font-bold text-slate-900 dark:text-white mb-1">$49<span class="text-base font-normal text-slate-500">/mo</span></div>
+<p class="text-xs text-slate-500 mb-4 h-8">Advanced analysis for small clinics.</p>
+<button class="w-full mt-auto py-2.5 px-4 rounded bg-primary text-white font-semibold text-sm hover:bg-blue-600 shadow-md shadow-primary/20 transition-all transform hover:-translate-y-0.5">Start Free Trial</button>
+</div>
+<!-- Clinical Support Header -->
+<div class="p-6 text-center flex flex-col relative">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Clinical Support</h3>
+<div class="text-3xl font-bold text-slate-900 dark:text-white mb-1">$129<span class="text-base font-normal text-slate-500">/mo</span></div>
+<p class="text-xs text-slate-500 mb-4 h-8">Full suite for hospitals &amp; large teams.</p>
+<button class="w-full mt-auto py-2.5 px-4 rounded border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:border-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors bg-transparent">Contact Sales</button>
+</div>
+</div>
+</div>
+<!-- Scrollable Content Area -->
+<div class="overflow-x-auto">
+<div class="min-w-[800px]">
+<!-- Category: Core Search -->
+<div class="bg-slate-50 dark:bg-slate-800/50 px-6 py-3 border-y border-slate-200 dark:border-slate-800 flex items-center gap-2">
+<span class="material-icons-round text-primary text-lg">search</span>
+<h4 class="font-bold text-sm text-slate-700 dark:text-slate-200 uppercase tracking-wide">Core Search Capabilities</h4>
+</div>
+<!-- Row: Drug Database -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            Comprehensive Drug Database
+                            <span class="material-icons-round text-slate-400 text-base cursor-help" title="Access to over 50,000 FDA approved medications">info</span>
+</div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+<div class="p-4 flex items-center justify-center bg-white dark:bg-slate-900">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+</div>
+<!-- Row: Interaction Checker -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            Interaction Checker
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm text-slate-500 border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+                            Basic (2 drugs max)
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm font-semibold text-slate-900 dark:text-white border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+                            Advanced (Unlimited)
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm font-semibold text-slate-900 dark:text-white bg-white dark:bg-slate-900">
+                            Advanced + Allergy
+                        </div>
+</div>
+<!-- Row: Dosage Calculator -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            Pediatric Dosage Calculator
+                        </div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+<span aria-label="Not Available" class="material-icons-round text-slate-300 text-2xl">remove</span>
+</div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+<div class="p-4 flex items-center justify-center bg-white dark:bg-slate-900">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+</div>
+<!-- Category: OCR & Analysis -->
+<div class="bg-slate-50 dark:bg-slate-800/50 px-6 py-3 border-y border-slate-200 dark:border-slate-800 flex items-center gap-2 mt-2">
+<span class="material-icons-round text-primary text-lg">document_scanner</span>
+<h4 class="font-bold text-sm text-slate-700 dark:text-slate-200 uppercase tracking-wide">OCR &amp; Visual Analysis</h4>
+</div>
+<!-- Row: Label Scanning -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            Rx Label Scanning
+                            <span class="material-icons-round text-slate-400 text-base cursor-help" title="Scan physical bottles to digitize info">info</span>
+</div>
+<div class="p-4 flex items-center justify-center text-sm text-slate-500 border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+                            5 scans / month
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm font-semibold text-slate-900 dark:text-white border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+                            50 scans / month
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm font-semibold text-slate-900 dark:text-white bg-white dark:bg-slate-900">
+                            Unlimited
+                        </div>
+</div>
+<!-- Row: Handwriting Recognition -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            Handwriting Recognition
+                        </div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+<span aria-label="Not Available" class="material-icons-round text-slate-300 text-2xl">remove</span>
+</div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+<div class="p-4 flex items-center justify-center bg-white dark:bg-slate-900">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+</div>
+<!-- Category: AI Tools -->
+<div class="bg-slate-50 dark:bg-slate-800/50 px-6 py-3 border-y border-slate-200 dark:border-slate-800 flex items-center gap-2 mt-2">
+<span class="material-icons-round text-primary text-lg">psychology</span>
+<h4 class="font-bold text-sm text-slate-700 dark:text-slate-200 uppercase tracking-wide">AI &amp; Clinical Intelligence</h4>
+</div>
+<!-- Row: Symptom Triaging -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            AI Symptom Triaging
+                        </div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+<span aria-label="Not Available" class="material-icons-round text-slate-300 text-2xl">remove</span>
+</div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+<div class="p-4 flex items-center justify-center bg-white dark:bg-slate-900">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+</div>
+<!-- Row: Plain Language -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            Patient Plain-Language Converter
+                        </div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+<span aria-label="Not Available" class="material-icons-round text-slate-300 text-2xl">remove</span>
+</div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+<span class="text-xs text-primary bg-primary/20 px-2 py-1 rounded font-semibold">Beta</span>
+</div>
+<div class="p-4 flex items-center justify-center bg-white dark:bg-slate-900">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+</div>
+<!-- Category: Professional Tools -->
+<div class="bg-slate-50 dark:bg-slate-800/50 px-6 py-3 border-y border-slate-200 dark:border-slate-800 flex items-center gap-2 mt-2">
+<span class="material-icons-round text-primary text-lg">business_center</span>
+<h4 class="font-bold text-sm text-slate-700 dark:text-slate-200 uppercase tracking-wide">Professional &amp; Team Tools</h4>
+</div>
+<!-- Row: API Access -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            EHR/EMR API Integration
+                        </div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+<span aria-label="Not Available" class="material-icons-round text-slate-300 text-2xl">remove</span>
+</div>
+<div class="p-4 flex items-center justify-center border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+<span aria-label="Not Available" class="material-icons-round text-slate-300 text-2xl">remove</span>
+</div>
+<div class="p-4 flex items-center justify-center bg-white dark:bg-slate-900">
+<span aria-label="Available" class="material-icons-round text-primary text-2xl">check_circle</span>
+</div>
+</div>
+<!-- Row: Team Management -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors border-b border-slate-100 dark:border-slate-800/50">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            Team Management &amp; Roles
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm text-slate-500 border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+                            Single User
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm font-semibold text-slate-900 dark:text-white border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+                            Up to 5 Users
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm font-semibold text-slate-900 dark:text-white bg-white dark:bg-slate-900">
+                            Unlimited
+                        </div>
+</div>
+<!-- Row: Support -->
+<div class="grid grid-cols-4 group hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<div class="p-4 px-6 flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300 border-r border-slate-100 dark:border-slate-800">
+                            Customer Support
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm text-slate-500 border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
+                            Email Only
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm text-slate-900 dark:text-white border-r border-slate-100 dark:border-slate-800 bg-primary/5 dark:bg-primary/10">
+                            Priority Email
+                        </div>
+<div class="p-4 flex items-center justify-center text-sm font-bold text-slate-900 dark:text-white bg-white dark:bg-slate-900">
+                            24/7 Dedicated Agent
+                        </div>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ or Social Proof Section underneath -->
+<div class="mt-16 text-center">
+<h5 class="text-slate-400 dark:text-slate-500 font-medium text-sm uppercase tracking-wide mb-6">Trusted by medical teams at</h5>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale">
+<!-- Using text placeholders with icons for logos to avoid external images -->
+<div class="flex items-center gap-2 text-xl font-bold text-slate-600 dark:text-slate-400">
+<span class="material-icons-round">local_hospital</span> MEDLIFE
+               </div>
+<div class="flex items-center gap-2 text-xl font-bold text-slate-600 dark:text-slate-400">
+<span class="material-icons-round">health_and_safety</span> CarePlus
+               </div>
+<div class="flex items-center gap-2 text-xl font-bold text-slate-600 dark:text-slate-400">
+<span class="material-icons-round">science</span> PharmaLab
+               </div>
+<div class="flex items-center gap-2 text-xl font-bold text-slate-600 dark:text-slate-400">
+<span class="material-icons-round">medical_services</span> NextHealth
+               </div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-slate-500 dark:text-slate-400 text-sm">
+                © 2023 PHARMAWISE. All rights reserved.
+            </div>
+<div class="flex gap-6 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">HIPAA Compliance</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Action Bar (Visible only on small screens) -->
+<div class="fixed bottom-0 left-0 w-full bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 p-4 lg:hidden z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+<div class="flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-xs text-slate-500 uppercase">Recommended</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">Enhanced Plan</span>
+</div>
+<button class="bg-primary text-white font-medium py-2 px-6 rounded shadow hover:bg-blue-600 transition-colors">Select Plan</button>
+</div>
+</div>
+</body></html>
