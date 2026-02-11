@@ -16,7 +16,29 @@ const app = express();
 
 app.set("trust proxy", 1);
 app.use(helmet());
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://pharmawise-delta.vercel.app",
+  "https://pharma-wise.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow Postman, server-to-server calls
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("CORS not allowed"));
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.use(express.json({ limit: "1mb" }));
 
 if (env.nodeEnv !== "development") {
