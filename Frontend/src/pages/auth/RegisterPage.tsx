@@ -16,7 +16,13 @@ export function RegisterPage() {
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     try {
-      const response = await register(email, password);
+      const response = await register({
+        email,
+        password,
+        name: fullName,
+        phone,
+        role,
+      });
       setToken(response.token);
       navigate("/dashboard");
     } catch (err) {

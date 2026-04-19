@@ -1,15 +1,9 @@
 import { useState } from "react";
-import { explainEducationalText } from "../../services/ai.service";
+import { explainEducationalText, type AiExplainResponse } from "../../services/ai.service";
 
 export function SymptomEducationPage() {
   const [input, setInput] = useState("");
-  const [response, setResponse] = useState<null | {
-    explanation: string;
-    keyTerms: string[];
-    confidence: number;
-    requiresManualReview: boolean;
-    disclaimer: string;
-  }>(null);
+  const [response, setResponse] = useState<AiExplainResponse | null>(null);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -144,7 +138,9 @@ export function SymptomEducationPage() {
               </div>
               <h3 className="mb-2 text-base font-semibold text-slate-900 dark:text-white">Educational Summary</h3>
               <p className="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                {response?.explanation || "Provide symptom details to receive an educational summary based on existing medical text and FDA sources."}
+                {response
+                  ? `Educational summary based on provided text. ${response.suggestions.length} key terms identified with ${Math.round(response.confidence * 100)}% confidence.`
+                  : "Provide symptom details to receive an educational summary based on existing medical text and FDA sources."}
               </p>
               <div className="rounded border border-primary/10 bg-primary/5 p-3">
                 <p className="flex items-start gap-2 text-xs text-primary dark:text-blue-300">
@@ -160,7 +156,7 @@ export function SymptomEducationPage() {
               <h2 className="text-lg font-bold text-slate-900 dark:text-white">Matched Medications</h2>
               <p className="mt-1 text-xs text-slate-500">Ranked by relevance to your symptom profile</p>
             </div>
-            {(response?.keyTerms || ["Educational", "FDA", "Summary"]).slice(0, 3).map((term, index) => (
+            {(response?.suggestions || ["Educational", "FDA", "Summary"]).slice(0, 3).map((term: string, index: number) => (
               <div key={term} className="group border-b border-slate-100 p-4 transition-colors last:border-b-0 hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/50 sm:p-6">
                 <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                   <div className="flex items-start gap-4">

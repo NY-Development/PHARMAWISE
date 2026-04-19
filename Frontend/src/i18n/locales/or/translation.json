@@ -1,1 +1,106 @@
-{}
+{
+  "nav": {
+    "home": "Fuula Jalqabaa",
+    "drugSearch": "Barbaachaa Qorichaa",
+    "prescriptionOcr": "Ajaja Qorichaa OCR",
+    "aiEducation": "Barnoota AI",
+    "plans": "Karoora",
+    "features": "Amaloota",
+    "signIn": "Seeni",
+    "signOut": "Ba'i",
+    "dashboard": "Daashboordii"
+  },
+  "common": {
+    "loading": "Fe'aa jira",
+    "error": "Dogoggorri uumame",
+    "retry": "Irra deebi'ii yaali",
+    "cancel": "Haquu",
+    "confirm": "Mirkaneessi",
+    "next": "Tarkaanfii Itti Aanuu",
+    "back": "Duubatti",
+    "save": "Kuusuu",
+    "delete": "Haquu",
+    "search": "Barbaaduu",
+    "close": "Cufi",
+    "submit": "Ergi",
+    "educational": "Barnootaa"
+  },
+  "auth": {
+    "login": "Seeni",
+    "register": "Herrega Uumuu",
+    "email": "Teessoo Imeelii",
+    "password": "Jecha Darbii",
+    "confirmPassword": "Jecha Darbii Mirkaneessi",
+    "forgotPassword": "Jecha darbii dagattan?",
+    "noAccount": "Herrega hin qabdu?",
+    "hasAccount": "Herrega qabdaa?",
+    "loginFailed": "Imeelii ykn jecha darbii sirrii miti",
+    "registerFailed": "Galmeen hin milkoofne"
+  },
+  "drug": {
+    "searchTitle": "Barbaachaa Qorichaa",
+    "searchPlaceholder": "Qoricha barbaadi...",
+    "searchDescription": "Odeeffannoo qorichaa FDA barnootaaf barbaadi.",
+    "purpose": "Kaayyoo",
+    "dosage": "Safaraa fi Bulchiinsa",
+    "warnings": "Akeekkachiisota",
+    "pregnancy": "Ulfaa fi Harma Hoosisuu",
+    "activeIngredients": "Wantoota Hojii Irra Jiran",
+    "inactiveIngredients": "Wantoota Hojii Irra Hin Jirre",
+    "genericName": "Maqaa Waliigalaa",
+    "brandName": "Maqaa Braandii",
+    "adverseEvents": "Dhiibbaalee Gabaafaman",
+    "noResults": "Odeeffannoon qorichaa hin argamne",
+    "disclaimer": "Ragaan openFDA barumsa qofaaf; gorsa yaalaa miti.",
+    "source": "Madda: openFDA (barnootaa)"
+  },
+  "prescription": {
+    "uploadTitle": "Ajaja Qorichaa Olkaa'i",
+    "uploadDescription": "Ajaja qorichaa kee nageenya'aan olkaa'i.",
+    "uploadHint": "Faayilii kee asitti harkisi ykn barbaaddachuuf cuqaasi.",
+    "selectFile": "Faayilii Filadhu",
+    "fileFormats": "JPEG, PNG ykn PDF hanga 10MB",
+    "ocrProvider": "Dhiyeessaa OCR",
+    "providerMistral": "Mistral (harka'an barreeffame)",
+    "providerTextract": "AWS Textract (fuula hedduu PDF)",
+    "analyzing": "Sanadaa Xiinxalaa Jira",
+    "analyzingDescription": "AI odeeffannoo ajaja qorichaa baasaa jira...",
+    "securityNote": "Ragaan kee icciitiin eegamee tajaajilama.",
+    "step1": "Olkaa'i",
+    "step2": "Xiinxaluu",
+    "step3": "Mirkaneessuu",
+    "step4": "Jabeessuu"
+  },
+  "ai": {
+    "educationTitle": "Barnoota Mallattoo Dhukkubaa",
+    "educationDescription": "Odeeffannoo fayyaa barnootaaf barreeffama galchi.",
+    "inputPlaceholder": "Mallattoo dhukkubaa galchi...",
+    "analyze": "Xiinxali",
+    "results": "Bu'aawwan",
+    "confidence": "Amantummaa",
+    "manualReview": "Gamaaggama harkaan gorfama",
+    "disclaimer": "Kun gorsa yaalaa miti; ogeessa fayyaa hayyama qabuun mari'adhaa."
+  },
+  "ocr": {
+    "disclaimer": "Bu'aaleen OCR maashiniin kan uumaman; yaalii kamiyyuuf fayyadamuu dura mirkaneeffadhaa.",
+    "lowConfidence": "Amantummaan gadi aanaa — bu'aawwan of eeggannoo'n mirkaneeffadhaa."
+  },
+  "dashboard": {
+    "welcome": "Baga nagaan dhufte",
+    "recentActivity": "Sochiiwwan Dhiyoo",
+    "prescriptions": "Ajajawwan Qorichaa",
+    "savedDrugs": "Qorichaalee Kuufaman",
+    "settings": "Qindaa'inota"
+  },
+  "disclaimers": {
+    "general": "Odeeffannoo barnootaa qofa. Kun gorsa yaalaa miti.",
+    "footer1": "Pharmawise odeeffannoo barnootaa qofa dhiyeessa; hin qoratu hin ajajus.",
+    "footer2": "Murtii yaalaa hundumaa ogeessa fayyaa hayyama qabuun mirkaneeffadhaa."
+  },
+  "tips": {
+    "title": "Gorsa bu'aa gaariitiif:",
+    "lighting": "Ifni ga'aan akka jiru mirkaneeffadhaa.",
+    "steady": "Kaameeraa sanadaa waliin wal-gittan qabaadhaa.",
+    "visible": "Barreeffamni hundi ifatti akka mul'atu mirkaneeffadhaa."
+  }
+}

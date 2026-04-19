@@ -1,1 +1,106 @@
-{}
+{
+  "nav": {
+    "home": "መነሻ",
+    "drugSearch": "የመድኃኒት ፍለጋ",
+    "prescriptionOcr": "የማዘዣ ኦሲአር",
+    "aiEducation": "AI ትምህርት",
+    "plans": "ዕቅዶች",
+    "features": "ባህሪያት",
+    "signIn": "ይግቡ",
+    "signOut": "ይውጡ",
+    "dashboard": "ዳሽቦርድ"
+  },
+  "common": {
+    "loading": "በመጫን ላይ",
+    "error": "ስህተት ተከስቷል",
+    "retry": "ደግመው ይሞክሩ",
+    "cancel": "ሰርዝ",
+    "confirm": "አረጋግጥ",
+    "next": "ቀጣይ ደረጃ",
+    "back": "ተመለስ",
+    "save": "አስቀምጥ",
+    "delete": "ሰርዝ",
+    "search": "ፈልግ",
+    "close": "ዝጋ",
+    "submit": "አቅርብ",
+    "educational": "ትምህርታዊ"
+  },
+  "auth": {
+    "login": "ይግቡ",
+    "register": "አካውንት ፍጠር",
+    "email": "ኢሜይል አድራሻ",
+    "password": "የይለፍ ቃል",
+    "confirmPassword": "የይለፍ ቃል ያረጋግጡ",
+    "forgotPassword": "የይለፍ ቃልዎን ረሱ?",
+    "noAccount": "አካውንት የለዎትም?",
+    "hasAccount": "አካውንት ይኖርዎታል?",
+    "loginFailed": "ልክ ያልሆነ ኢሜይል ወይም የይለፍ ቃል",
+    "registerFailed": "ምዝገባ አልተሳካም"
+  },
+  "drug": {
+    "searchTitle": "የመድኃኒት ፍለጋ",
+    "searchPlaceholder": "መድኃኒት ይፈልጉ...",
+    "searchDescription": "ለትምህርት ዓላማ የ FDA የመድኃኒት መረጃ ይፈልጉ።",
+    "purpose": "ዓላማ",
+    "dosage": "መጠን እና አስተዳደር",
+    "warnings": "ማስጠንቀቂያዎች",
+    "pregnancy": "እርግዝና እና ማጥባት",
+    "activeIngredients": "ንቁ ንጥረ ነገሮች",
+    "inactiveIngredients": "ንቁ ያልሆኑ ንጥረ ነገሮች",
+    "genericName": "ጄኔሪክ ስም",
+    "brandName": "ብራንድ ስም",
+    "adverseEvents": "የተዘገቡ የጎንዮሽ ውጤቶች",
+    "noResults": "የመድኃኒት መረጃ አልተገኘም",
+    "disclaimer": "የ openFDA መረጃ ለትምህርት ዓላማ ብቻ ነው፤ የሕክምና ምክር አይደለም።",
+    "source": "ምንጭ: openFDA (ትምህርታዊ)"
+  },
+  "prescription": {
+    "uploadTitle": "ማዘዣ ይስቀሉ",
+    "uploadDescription": "ማዘዣዎን በደህነት ይስቀሉ።",
+    "uploadHint": "ፋይልዎን እዚህ ይጣሉ ወይም ለመፈለግ ጠቅ ያድርጉ።",
+    "selectFile": "ፋይል ይምረጡ",
+    "fileFormats": "JPEG, PNG ወይም PDF እስከ 10MB",
+    "ocrProvider": "OCR ሰጪ",
+    "providerMistral": "Mistral (በእጅ የተጻፈ)",
+    "providerTextract": "AWS Textract (ብዙ ገጽ PDF)",
+    "analyzing": "ሰነድ በመተንተን ላይ",
+    "analyzingDescription": "AI ማዘዣ ዝርዝሮችን በማውጣት ላይ ነው...",
+    "securityNote": "መረጃዎ ተመስጥሮ በደህንነት ይታከማል።",
+    "step1": "ስቀል",
+    "step2": "መተንተን",
+    "step3": "አረጋግጥ",
+    "step4": "አረጋግጥ"
+  },
+  "ai": {
+    "educationTitle": "የበሽታ ምልክት ትምህርት",
+    "educationDescription": "ትምህርታዊ የጤና መረጃ ለማግኘት ጽሑፍ ያስገቡ።",
+    "inputPlaceholder": "የበሽታ ምልክቶች ያስገቡ...",
+    "analyze": "ተንትን",
+    "results": "ውጤቶች",
+    "confidence": "እምነት",
+    "manualReview": "በእጅ ግምገማ ይመከራል",
+    "disclaimer": "ይህ የሕክምና ምክር አይደለም፤ ሁልጊዜ ባለሙያ ሐኪምዎን ያማክሩ።"
+  },
+  "ocr": {
+    "disclaimer": "የ OCR ውጤቶች በማሽን የተፈጠሩ ናቸው፤ ለሕክምና ከመጠቀምዎ በፊት ያረጋግጡ።",
+    "lowConfidence": "ዝቅተኛ እምነት — ውጤቶችን በጥንቃቄ ያረጋግጡ።"
+  },
+  "dashboard": {
+    "welcome": "እንኳን ደህና ተመለሱ",
+    "recentActivity": "የቅርብ ጊዜ እንቅስቃሴ",
+    "prescriptions": "ማዘዣዎች",
+    "savedDrugs": "የተቀመጡ መድኃኒቶች",
+    "settings": "ቅንብሮች"
+  },
+  "disclaimers": {
+    "general": "ለትምህርት ዓላማ ብቻ ነው። ይህ የሕክምና ምክር አይደለም።",
+    "footer1": "Pharmawise ትምህርታዊ መረጃ ብቻ ይሰጣል፤ ምርመራ ወይም ማዘዣ አይሰጥም።",
+    "footer2": "የሕክምና ውሳኔዎችን ሁልጊዜ ባለሙያ ሐኪም ያረጋግጡ።"
+  },
+  "tips": {
+    "title": "ለተሻለ ውጤት ጠቃሚ ምክሮች:",
+    "lighting": "ጥሩ ብርሃን እንዲኖር ያረጋግጡ።",
+    "steady": "ካሜራውን ከሰነዱ ጋር ትይዩ ያድርጉ።",
+    "visible": "ሁሉም ጽሑፍ በግልጽ እንዲታይ ያረጋግጡ።"
+  }
+}

@@ -1,1 +1,116 @@
-{}
+{
+  "nav": {
+    "home": "Home",
+    "drugSearch": "Drug Search",
+    "prescriptionOcr": "Prescription OCR",
+    "aiEducation": "AI Education",
+    "plans": "Plans",
+    "features": "Features",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "dashboard": "Dashboard"
+  },
+  "common": {
+    "loading": "Loading",
+    "error": "An error occurred",
+    "retry": "Try Again",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "next": "Next Step",
+    "back": "Back",
+    "save": "Save",
+    "delete": "Delete",
+    "search": "Search",
+    "close": "Close",
+    "submit": "Submit",
+    "educational": "Educational"
+  },
+  "auth": {
+    "login": "Sign In",
+    "register": "Create Account",
+    "email": "Email Address",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "loginFailed": "Invalid email or password",
+    "registerFailed": "Registration failed"
+  },
+  "drug": {
+    "searchTitle": "Drug Search",
+    "searchPlaceholder": "Search for a medication...",
+    "searchDescription": "Search the FDA database for educational drug information.",
+    "purpose": "Purpose",
+    "dosage": "Dosage & Administration",
+    "warnings": "Warnings",
+    "pregnancy": "Pregnancy & Breastfeeding",
+    "activeIngredients": "Active Ingredients",
+    "inactiveIngredients": "Inactive Ingredients",
+    "genericName": "Generic Name",
+    "brandName": "Brand Name",
+    "adverseEvents": "Reported Adverse Events",
+    "noResults": "No drug information found",
+    "disclaimer": "openFDA data is for educational purposes only and does not constitute medical advice.",
+    "source": "Source: openFDA (educational)"
+  },
+  "prescription": {
+    "uploadTitle": "Upload Prescription",
+    "uploadDescription": "Securely upload your prescription to get started.",
+    "uploadHint": "Drag and drop your file here, or click to browse from your computer.",
+    "selectFile": "Select File",
+    "fileFormats": "JPEG, PNG or PDF up to 10MB",
+    "ocrProvider": "OCR Provider",
+    "providerMistral": "Mistral (handwritten)",
+    "providerTextract": "AWS Textract (multi-page PDF)",
+    "analyzing": "Analyzing Document",
+    "analyzingDescription": "Our AI is extracting prescription details...",
+    "readingMedications": "Reading medications...",
+    "imageEnhancement": "Image enhancement",
+    "textRecognition": "Text recognition (OCR)",
+    "identifyingDrugs": "Identifying drug names",
+    "dosageValidation": "Dosage validation",
+    "verifyTitle": "Verify Results",
+    "verifyDescription": "Please review the extracted information.",
+    "confirmTitle": "Confirm Prescription",
+    "confirmDescription": "Confirm the details are correct.",
+    "securityNote": "Your data is encrypted and processed securely.",
+    "step1": "Upload",
+    "step2": "Analyzing",
+    "step3": "Verify",
+    "step4": "Confirm"
+  },
+  "ai": {
+    "educationTitle": "Symptom Education",
+    "educationDescription": "Enter text to receive educational health information.",
+    "inputPlaceholder": "Enter symptoms or health terms...",
+    "analyze": "Analyze",
+    "results": "Results",
+    "keyTerms": "Key Terms",
+    "confidence": "Confidence",
+    "manualReview": "Manual review recommended",
+    "disclaimer": "This is not medical advice and does not diagnose, treat, or prescribe. Always consult a licensed healthcare professional."
+  },
+  "ocr": {
+    "disclaimer": "OCR results are machine-generated and require human confirmation before any medical use.",
+    "lowConfidence": "Low confidence — please verify results carefully."
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "recentActivity": "Recent Activity",
+    "prescriptions": "Prescriptions",
+    "savedDrugs": "Saved Drugs",
+    "settings": "Settings"
+  },
+  "disclaimers": {
+    "general": "Educational information only. This is not medical advice.",
+    "footer1": "Pharmawise provides educational information only and does not diagnose or prescribe.",
+    "footer2": "Always confirm medical decisions with a licensed professional."
+  },
+  "tips": {
+    "title": "Tips for best results:",
+    "lighting": "Ensure good lighting and avoid glare on the paper.",
+    "steady": "Keep the camera steady and parallel to the document.",
+    "visible": "Make sure all text, especially handwriting, is clearly visible."
+  }
+}

@@ -5,9 +5,6 @@ import { PlanSelectionPage } from "../pages/marketing/PlanSelectionPage";
 import { FeatureComparisonPage } from "../pages/marketing/FeatureComparisonPage";
 import { LoginPage } from "../pages/auth/LoginPage";
 import { RegisterPage } from "../pages/auth/RegisterPage";
-import { DrugSearchPage } from "../pages/drug/DrugSearchPage";
-import { DrugDetailPage } from "../pages/drug/DrugDetailPage";
-import { SymptomEducationPage } from "../pages/ai/SymptomEducationPage";
 import { UploadStep1 } from "../pages/prescription/UploadStep1";
 import { UploadStep2Analyzing } from "../pages/prescription/UploadStep2Analyzing";
 import { UploadStep3Verify } from "../pages/prescription/UploadStep3Verify";
@@ -16,9 +13,13 @@ import { Shell } from "../components/layout/Shell";
 import { LoadingState } from "../components/feedback/LoadingState";
 import { useAuth } from "../hooks/useAuth";
 
+// Lazy-loaded heavy pages for performance
 const UserDashboard = lazy(() => import("../pages/dashboards/UserDashboard"));
 const DoctorDashboard = lazy(() => import("../pages/dashboards/DoctorDashboard"));
 const AdminDashboard = lazy(() => import("../pages/dashboards/AdminDashboard"));
+const DrugSearchPage = lazy(() => import("../pages/drug/DrugSearchPage").then(m => ({ default: m.DrugSearchPage })));
+const DrugDetailPage = lazy(() => import("../pages/drug/DrugDetailPage").then(m => ({ default: m.DrugDetailPage })));
+const SymptomEducationPage = lazy(() => import("../pages/ai/SymptomEducationPage").then(m => ({ default: m.SymptomEducationPage })));
 
 function RoleGate({
   allowed,

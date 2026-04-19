@@ -4,6 +4,7 @@ import helmet from "helmet";
 
 import { env } from "./config/env";
 import { rateLimiter } from "./middlewares/rateLimit.middleware";
+import { i18nMiddleware } from "./middlewares/i18n.middleware";
 import { errorHandler, notFoundHandler } from "./middlewares/error.middleware";
 import { authRoutes } from "./modules/auth/auth.routes";
 import { drugRoutes } from "./modules/drugs/drug.routes";
@@ -36,10 +37,13 @@ app.use(
     },
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: ["Content-Type", "Authorization", "Accept-Language"],
   })
 );
 app.use(express.json({ limit: "1mb" }));
+
+// i18n detection — must come after body parsing, before routes
+app.use(i18nMiddleware);
 
 if (env.nodeEnv !== "development") {
   app.use((req, res, next) => {

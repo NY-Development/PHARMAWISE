@@ -1,16 +1,16 @@
 import { apiClient } from "./apiClient";
 
 export interface AiExplainResponse {
-  explanation: string;
-  keyTerms: string[];
+  suggestions: string[];
   confidence: number;
+  warnings: string[];
   requiresManualReview: boolean;
   disclaimer: string;
 }
 
 export async function explainEducationalText(input: string) {
   const { data } = await apiClient.post<AiExplainResponse>("/api/ai/explain", {
-    input
+    input,
   });
   return data;
 }

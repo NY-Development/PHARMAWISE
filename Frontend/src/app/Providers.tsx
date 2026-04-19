@@ -1,6 +1,8 @@
 import { type ReactNode, createContext, useCallback, useMemo, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import type { UserRole } from "../types/user";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "sonner";
 
 type TokenPayload = { role?: UserRole };
 
@@ -50,5 +52,22 @@ export function Providers({ children }: { children: ReactNode }) {
     [token, role, setToken, clearToken]
   );
 
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={value}>
+      {/* ✅ GLOBAL UI PROVIDERS */}
+      <TooltipProvider delayDuration={200}>
+        {children}
+
+        {/* ✅ GLOBAL TOAST SYSTEM */}
+        <Toaster
+          position="top-right"
+          richColors
+          closeButton
+          toastOptions={{
+            duration: 4000
+          }}
+        />
+      </TooltipProvider>
+    </AuthContext.Provider>
+  );
 }

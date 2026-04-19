@@ -1,9 +1,12 @@
 import { Router } from "express";
 import { explainText } from "./ai.controller";
-import { requireFields } from "../../middlewares/validate.middleware";
+import { validateBody } from "../../middlewares/validate.middleware";
+import { aiExplainSchema } from "../../utils/schemas";
+import { aiRateLimiter } from "../../middlewares/rateLimit.middleware";
 
 const router = Router();
 
-router.post("/explain", requireFields(["input"]), explainText);
+// AI endpoints get stricter rate limiting + Zod validation
+router.post("/explain", aiRateLimiter, validateBody(aiExplainSchema), explainText);
 
 export const aiRoutes = router;

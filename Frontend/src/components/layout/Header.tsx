@@ -9,7 +9,7 @@ export function Header() {
           <Link to="/" className="text-lg font-bold tracking-tight text-[#1f6bff]">
             Pharmawise
           </Link>
-          <Badge tone="info">Educational</Badge>
+          <Badge variant="secondary">Educational</Badge>
         </div>
         <nav className="hidden items-center gap-6 md:flex">
           <Link className="text-sm font-medium text-slate-600 hover:text-[#1f6bff]" to="/drug-search">

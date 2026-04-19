@@ -1,22 +1,30 @@
 import { AI_CONFIG } from "../../config/ai";
 import { computeConfidence } from "../../utils/confidence";
 import { sanitizeText } from "../../utils/sanitizer";
-import { enforceAISafety } from "./safety.guard";
+import { checkAISafety } from "./safety.guard";
+import type { AIAnalysisResultDTO } from "../../types/dto";
 
-export function analyzeEducationalText(input: string) {
+/**
+ * Analyzes educational text and returns a structured result.
+ * NEVER provides medical advice, dosing, or diagnosis.
+ */
+export function analyzeEducationalText(input: string): Omit<AIAnalysisResultDTO, "disclaimer"> {
   const sanitized = sanitizeText(input);
-  enforceAISafety(sanitized);
+  const safetyResult = checkAISafety(sanitized);
 
   const tokens = sanitized.match(/[A-Za-z][A-Za-z-]{2,}/g) || [];
   const unique = Array.from(new Set(tokens));
   const confidence = computeConfidence(unique.length, sanitized.length);
 
-  // Safety: never provide medical advice or dosing.
+  const warnings: string[] = [...safetyResult.warnings];
+  if (confidence < AI_CONFIG.minConfidence) {
+    warnings.push("Low confidence — results may be incomplete or inaccurate.");
+  }
+
   return {
-    explanation: "Educational summary based on provided text only.",
-    keyTerms: unique.slice(0, AI_CONFIG.maxSuggestions),
+    suggestions: unique.slice(0, AI_CONFIG.maxSuggestions),
     confidence,
-    requiresManualReview: confidence < AI_CONFIG.minConfidence,
-    disclaimer: "This is not medical advice and does not diagnose or prescribe."
+    warnings,
+    requiresManualReview: confidence < AI_CONFIG.minConfidence || safetyResult.warnings.length > 0,
   };
 }
